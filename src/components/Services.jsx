@@ -36,34 +36,53 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-20 relative bg-[#0d0d0e] text-white">
-      {/* Glow background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.05),transparent_70%)] pointer-events-none"></div>
+    <section
+      id="services"
+      className="py-24 relative bg-[#0d0d0e] text-white overflow-hidden"
+    >
+      {/* Glow sutil de fondo */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.06),transparent_75%)] pointer-events-none"></div>
 
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
+        {/* Título */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl font-semibold text-center mb-14 tracking-wide"
+          transition={{ duration: 0.7 }}
+          className="text-4xl md:text-5xl font-semibold text-center mb-16 tracking-tight"
         >
           Servicios
         </motion.h2>
 
+        {/* Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ scale: 1.03 }}
-              className="backdrop-blur-xl bg-white/5 border border-white/10 p-6 rounded-2xl shadow-lg hover:shadow-white/10 transition-shadow duration-300"
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              whileHover={{ scale: 1.04 }}
+              className="
+                backdrop-blur-xl bg-white/5 
+                border border-white/10 
+                p-7 rounded-2xl 
+                shadow-[0_0_20px_rgba(255,255,255,0.04)]
+                hover:shadow-[0_0_35px_rgba(255,255,255,0.08)]
+                transition-all duration-300
+              "
             >
-              <div className="mb-4">{service.icon}</div>
-              <h3 className="text-xl font-medium mb-2">{service.title}</h3>
+              {/* Ícono */}
+              <div className="mb-5">{service.icon}</div>
+
+              {/* Título del servicio */}
+              <h3 className="text-lg font-semibold mb-2">
+                {service.title}
+              </h3>
+
+              {/* Descripción */}
               <p className="text-white/70 text-sm leading-relaxed">
                 {service.description}
               </p>
@@ -73,5 +92,6 @@ export default function Services() {
       </div>
     </section>
   );
-};
+}
+
 

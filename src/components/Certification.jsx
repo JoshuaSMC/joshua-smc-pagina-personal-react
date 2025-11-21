@@ -24,12 +24,12 @@ export default function Certifications() {
         Formación & Certificaciones
       </h2>
 
-      {/* Logo de institucion */}
+      {/* Logo de institución */}
       <div className="pb-8 pt-7 flex items-center justify-center">
         <img
           src={logo}
           alt="Digital House"
-          className="h-8 md:h-5 object-contain opacity-90 hover:opacity-100 transition"
+          className="h-4 md:h-5 object-contain opacity-90 hover:opacity-100 transition-opacity"
         />
       </div>
 
@@ -49,7 +49,6 @@ export default function Certifications() {
               border border-blue-400/30
               backdrop-blur-xl
               bg-sky-500/5
-              hover:from-[#2563eb]/40 hover:to-[#3b82f6]/40
               shadow-[0_0_20px_rgba(37,99,235,0.15)]
               min-h-[70px]
               transition-all
@@ -65,4 +64,3 @@ export default function Certifications() {
     </section>
   );
 }
-
