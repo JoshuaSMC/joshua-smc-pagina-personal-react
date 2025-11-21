@@ -130,5 +130,5 @@ para ver el proyecto.
 Joshua SMC  
 Frontend Developer | React | JavaScript | UI/UX
 
-⭐ Si te gustó este proyect0, podés dejar una estrella en el repo :)
+⭐ Si te gustó este proyecto, podés dejar una estrella en el repo :)
 
