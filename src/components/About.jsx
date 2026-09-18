@@ -1,10 +1,18 @@
 import { motion } from "framer-motion";
 
-const goals = [
-  "Consolidarme como Full Stack Developer",
-  "Formarme en Data Analyst",
-  "Aprender nuevas tecnologías y frameworks",
-  "Crear proyectos funcionales y estéticos",
+const experience = [
+  {
+    role: "Desarrollador de Software Freelance",
+    dates: "Noviembre 2025 – Presente",
+    description:
+      "Colaboré con una empresa de marketing resolviendo problemas concretos: seguridad de acceso, gestión de reservas y procesos que antes se hacían a mano. Ahora empiezo a tomar proyectos a través de plataformas freelance.",
+  },
+  {
+    role: "Desarrollador Web Freelance",
+    dates: "Abril 2024 – Junio 2024",
+    description:
+      "Ayudé a negocios que recién empezaban a tener su primera página web, como tiendas de ropa que hasta entonces solo vendían por redes sociales.",
+  },
 ];
 
 export default function About() {
@@ -16,10 +24,10 @@ export default function About() {
       {/* Fondo degradado */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0e0e0e] to-black opacity-70" />
 
-      {/* Glow azul optimizado */}
-      <div className="absolute left-1/2 top-1/3 -translate-x-1/2 
+      {/* Glow cálido, mismo dorado apagado que el Hero */}
+      <div className="absolute left-1/2 top-1/3 -translate-x-1/2
         w-[260px] h-[260px] md:w-[450px] md:h-[450px]
-        bg-blue-500/20 blur-[100px] md:blur-[160px] rounded-full" 
+        bg-gold/[0.12] blur-[100px] md:blur-[160px] rounded-full"
       />
 
       <div className="relative z-10 max-w-5xl mx-auto">
@@ -29,22 +37,21 @@ export default function About() {
         </h2>
 
         {/* Texto */}
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-6">
+        <div className="text-center max-w-3xl mx-auto mb-28 space-y-6">
           <p className="text-white/80 text-lg leading-relaxed">
-            Soy Joshua, un Frontend Developer con pasión por construir interfaces
-            modernas, limpias y funcionales. Actualmente me desarrollo para ser Full
-            Stack, ampliando mis capacidades técnicas.
+            Antes de escribir código, me interesa entender la lógica detrás de un
+            problema y cómo se conectan las piezas, porque recién ahí un sistema
+            empieza a tener sentido. Creo que desarrollar no es solo resolver un
+            problema puntual, sino construir soluciones que sigan teniendo sentido
+            cuando las necesidades cambien.
           </p>
 
           <p className="text-white/80 text-lg leading-relaxed">
-            Disfruto aprender, crear y aportar soluciones reales con diseño y código.
-            Me enfoco en la estética, la experiencia del usuario y los detalles que
-            hacen que una interfaz se sienta premium.
-          </p>
-
-          <p className="text-white/80 text-lg leading-relaxed">
-            Me gustaría crecer como profesional mientras desarrollo proyectos
-            que combinan creatividad, tecnología y propósito.
+            Siempre me gustó pensar en sistemas. Por eso elegí el backend: una
+            aplicación puede tener una buena interfaz, pero es en el backend donde
+            realmente cobra vida. Mi enfoque principal está en Java y Spring Boot,
+            aunque también trabajo con React y JavaScript cuando el proyecto lo
+            requiere.
           </p>
         </div>
 
@@ -61,36 +68,36 @@ export default function About() {
 
               {/* Tarjeta */}
               <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
+                <h4 className="text-xl font-semibold text-white mb-4">Backend &amp; Testing</h4>
+                <p className="text-white/80">Java, Spring Boot, Spring Security, REST APIs, JPA / Hibernate, MySQL, JUnit 5, Selenium</p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
+                <h4 className="text-xl font-semibold text-white mb-4">DevOps &amp; Cloud</h4>
+                <p className="text-white/80">Docker, AWS, GitHub Actions, Terraform, CloudFormation, Prometheus, Grafana</p>
+              </div>
+
+              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
                 <h4 className="text-xl font-semibold text-white mb-4">Frontend</h4>
-                <p className="text-white/80">HTML, CSS, JavaScript, React</p>
+                <p className="text-white/80">React, JavaScript, TypeScript, Tailwind CSS</p>
               </div>
 
               <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
-                <h4 className="text-xl font-semibold text-white mb-4">Diseño UI/UX</h4>
-                <p className="text-white/80">Layouts, accesibilidad, prototipos</p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
-                <h4 className="text-xl font-semibold text-white mb-4">Herramientas</h4>
-                <p className="text-white/80">Git, GitHub, VSCode, Netlify</p>
-              </div>
-
-              <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-xl border border-white/10">
-                <h4 className="text-xl font-semibold text-white mb-4">En aprendizaje</h4>
-                <p className="text-white/80">Java, bases de datos</p>
+                <h4 className="text-xl font-semibold text-white mb-4">En curso / profundizando</h4>
+                <p className="text-white/80">Microservicios, arquitectura backend avanzada, seguridad, Go, bases de datos NoSQL</p>
               </div>
 
             </div>
           </div>
 
-          {/* Objetivos */}
+          {/* Experiencia */}
           <div>
             <h3 className="text-3xl font-semibold text-white mb-8 text-center lg:text-left">
-              Mis Objetivos
+              Experiencia
             </h3>
 
-            <ul className="relative border-l border-white/20 ml-8 space-y-12">
-              {goals.map((goal, index) => (
+            <ul className="relative border-l border-white/20 ml-8 space-y-10">
+              {experience.map((item, index) => (
                 <motion.li
                   key={index}
                   className="relative pl-8"
@@ -99,21 +106,11 @@ export default function About() {
                   transition={{ delay: index * 0.15, duration: 0.5 }}
                 >
                   <div className="absolute left-[-10px] top-2 w-4 h-4 rounded-full bg-white/80 shadow-[0_0_12px_rgba(255,255,255,0.6)]" />
-                  <p className="text-white/90 text-lg font-light">{goal}</p>
+                  <p className="text-white/90 text-lg font-medium">{item.role}</p>
+                  <p className="text-gold-light/80 text-sm mt-0.5">{item.dates}</p>
+                  <p className="text-white/70 text-sm mt-2 leading-relaxed">{item.description}</p>
                 </motion.li>
               ))}
-
-              <motion.li
-                className="relative pl-8 pt-1"
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.7, duration: 0.5 }}
-              >
-                <div className="absolute left-[-14px] w-6 h-6 rounded-full bg-blue-400/70 shadow-[0_0_20px_rgba(96,165,250,0.8)]" />
-                <p className="text-blue-300 text-lg -m-1 font-medium">
-                  Una carrera sólida en tecnología 🚀
-                </p>
-              </motion.li>
             </ul>
           </div>
         </div>

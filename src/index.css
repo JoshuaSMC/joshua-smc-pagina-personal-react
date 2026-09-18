@@ -1,31 +1,22 @@
 @import "tailwindcss";
 
+/* ---- Paleta de marca: única fuente de verdad para el dorado y el azul
+   usados en toda la web (Certificaciones, Proyectos, Servicios, Contacto).
+   Cambiar un tono acá lo actualiza en todos los componentes. ---- */
+@theme {
+  --color-gold: #c9a15f;
+  --color-gold-light: #d9b877;
+  --color-gold-lighter: #e0c088;
+  --color-blue: #4c7cff;
+  --color-blue-light: #8fb0ff;
+  --color-blue-lighter: #6f97ff;
+}
+
 /* ---- Estilos globales ---- */
 @keyframes gradient{
   0%, 100% { background-position: 0% 50% ; }
   50% { background-position: 100% 50%; }
 }
- 
-@keyframes glowPulse {
-  0% {
-    transform: scale(0.9);
-    opacity: 0.8;
-  }
-  50% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(0.9);
-    opacity: 0.8;
-  }
-}
-
-.animate-glowPulse {
-  animation: glowPulse 7s ease-in-out infinite;
-  
-}
-
 
 :root {
   --background: #000000; 
@@ -39,15 +30,4 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-}
-
-/* efecto blur glass iOS */
-.glass {
-  backdrop-filter: blur(20px) saturate(160%) contrast(120%);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-/* movimiento suave */
-.smooth {
-  transition: all 0.3s ease;
 }

@@ -56,7 +56,8 @@ export default function QuoteSection() {
             drop-shadow-[0_0_40px_rgba(255,255,255,0.35)]
           "
         >
-          El desarrollo me enseñó que los límites se expanden cuando uno se anima a empezar.
+          No programo para que funcione hoy; programo para que siga teniendo sentido
+          mañana.
         </h2>
       </motion.div>
 

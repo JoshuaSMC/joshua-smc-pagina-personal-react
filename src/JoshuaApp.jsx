@@ -5,6 +5,8 @@ import Certifications from "./components/Certification";
 import Projects from "./components/Projects";
 import QuoteSection from "./components/QuoteSection";
 import Services from "./components/Services";
+import Process from "./components/Process";
+import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 export default function JoshuaApp() {
@@ -17,6 +19,8 @@ export default function JoshuaApp() {
       <Projects />
       <QuoteSection />
       <Services />
+      <Process />
+      <Contact />
       <Footer />
     </>
   );

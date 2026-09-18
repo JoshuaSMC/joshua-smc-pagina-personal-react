@@ -1,134 +1,76 @@
-# 🌐 Portfolio Personal | React + Tailwind + Framer Motion
+# Portfolio personal | Joshua Sanchez Mc Leish
 
-Portfolio profesional desarrollado con **React**, presentando mis proyectos, certificaciones, servicios y una sección motivacional.  
-Su objetivo es transmitir una identidad visual premium, cálida y moderna, acompañada de animaciones fluidas y una experiencia elegante.
+Portfolio de **Backend Developer Junior (Java + Spring Boot)**. Presenta mi formación, experiencia, proyectos reales con demo y repositorio, y los servicios que ofrezco como freelance.
 
-Este portfolio refleja mi enfoque en **Frontend Development**, **UI/UX** y diseño adaptable.
-
----
-
-## 🚀 Demo
-
-🔗 **Deploy:** https://joshua-smc.netlify.app/  
-🔗 **Repositorio:** https://github.com/JoshuaSMC/joshua-smc-pagina-personal-react
+🔗 **Sitio en vivo:** https://joshua-smc.netlify.app/
 
 ---
 
-## ✨ Características principales
+## Qué muestra
 
-✅ Sección Hero con animaciones y fondo dinámico  
-✅ NavBar fijo y completamente responsive  
-✅ Sección About con información personal clara y visual  
-✅ Módulo de certificaciones con cards animadas  
-✅ Grid de proyectos con hover effects y profundidad  
-✅ Sección motivacional con **parallax real**  
-✅ Servicios presentados con íconos, microinteracciones y glow premium  
-✅ Footer minimalista con enlaces profesionales  
-✅ Diseño coherente con estética **coffee–premium oscuro**  
-✅ Animaciones suaves sin sacrificar performance  
+- **Hero** con ilustración SVG propia (planeta, anillos y resplandor) y acceso directo al CV.
+- **Sobre mí y habilidades** agrupadas por área: Backend, DevOps & Cloud, Frontend y en curso.
+- **Experiencia y formación**, incluyendo el programa Certified Tech Developer (Digital House, Globant y Mercado Libre).
+- **Proyectos destacados** con carrusel de capturas, stack, demo y repositorios:
+  - Stellar Jets: plataforma full stack de reservas de vuelos.
+  - Dental Clinic Management System: gestión de pacientes, turnos y roles (RBAC).
+  - Backend Infrastructure & DevOps: API en producción con Docker, Terraform, GitHub Actions, Prometheus y Grafana.
+- **Servicios y proceso de trabajo** orientados a clientes freelance.
+- **Contacto** por mail, WhatsApp, LinkedIn y GitHub.
 
----
+## Tecnologías
 
-## 🛠️ Tecnologías utilizadas
+| Tecnología | Uso |
+|---|---|
+| React 19 | Interfaz, un componente por sección |
+| Vite 7 | Entorno de desarrollo y build |
+| Tailwind CSS 4 | Estilos, con paleta de marca definida en `@theme` |
+| Framer Motion | Animaciones de entrada y parallax |
+| Lucide React | Íconos |
+| ESLint | Linting con reglas de React y hooks |
 
-| Tecnología | Uso principal |
-|-----------|----------------|
-| ⚛️ **React.js** | Framework principal del proyecto |
-| 🎨 **Tailwind CSS** | Estilos modernos, responsive y escalables |
-| ✨ **Framer Motion** | Animaciones fluidas y transiciones premium |
-| 🖼️ **React Lazy + Suspense** | Optimización del bundle (carga por demanda) |
-| 💡 **Lucide Icons** | Íconos limpios y modernos |
-| ⚡ **Vite** | Entorno de desarrollo rápido |
-| 🎭 **CSS Gradients & Blurs** | Efectos visuales avanzados |
-| 🔁 **Hooks personalizados** | Manejo de animaciones y lógica de UI |
-
----
-
-## 📁 Estructura del proyecto
+## Estructura
 
 ```
 src/
-├── components/
-│   ├── NavBar.jsx
-│   ├── Hero.jsx
-│   ├── About.jsx
-│   ├── Certification.jsx
-│   ├── Projects.jsx
-│   ├── QuoteSection.jsx
-│   ├── Services.jsx
-│   ├── Footer.jsx
-│
-├── assets/
-│   ├── imágenes y texturas
-│
-├── styles/
-│   ├── global.css
-│
-├── JoshuaApp.jsx
-└── main.jsx
-
+├── components/     Una sección por archivo (Hero, About, Projects, ...)
+├── lib/            Utilidades compartidas (color.js)
+├── assets/         Imágenes optimizadas y CV
+├── index.css       Tailwind, tokens de color y estilos globales
+├── JoshuaApp.jsx   Composición de las secciones
+└── main.jsx        Punto de entrada
+public/
+└── robots.txt
 ```
 
-## 🎨 Diseño visual  
+## Decisiones de diseño
 
-### Paleta de colores principal
-- 🌑 Negro profundo: #000
-- 🟤 Marrones cálidos premium
-- ✨ Blanco suave para brillos
-- 🔥 Gradientes color café–oro
+- **Paleta:** fondo negro con dos acentos, dorado (Hero, Proyectos, Contacto) y azul (Formación). Los tonos viven en `src/index.css` bajo `@theme`; cambiarlos ahí actualiza todo el sitio.
+- **Rendimiento:** capturas de proyectos comprimidas, imágenes con dimensiones explícitas y carga diferida. Lighthouse sobre el build de producción (móvil, 4G lenta): 99 rendimiento, 100 accesibilidad, 100 buenas prácticas, 100 SEO.
+- **Tipografía:** fuentes del sistema, sin cargar fuentes externas.
 
-### Tipografías
-- Inter — títulos y subtítulos
-- Poppins — cuerpo del texto
-
-### Efectos premium
-- Gradientes animados
-- Parallax real con useScroll
-- Glow suave en cards y títulos
-- Sombras difusas profesionales
-
----
-
-## 💡 Aprendizajes y enfoques del proyecto
-- Práctica avanzada con Framer Motion
-- Dominio de layouts fluidos y responsive
-- Creación de una identidad visual propia
-- Performance sin sacrificar diseño
-- Arquitectura limpia y componentes reutilizables
-
----
-
-## ⚙️ Instalación y ejecución local
+## Ejecución local
 
 ```bash
-# Clonar repositorio
 git clone https://github.com/JoshuaSMC/joshua-smc-pagina-personal-react.git
-
-# Entrar en la carpeta
 cd joshua-smc-pagina-personal-react
-
-# Instalar dependencias
 npm install
-
-# Ejecutar entorno de desarrollo
 npm run dev
 ```
-Luego abrí http://localhost:5173
 
-para ver el proyecto.
+Otros comandos:
 
-## 🌱 Futuras mejoras
+```bash
+npm run build     # build de producción en dist/
+npm run preview   # sirve el build (usar este para medir rendimiento)
+npm run lint      # ESLint
+```
 
-- 🧩 Modo oscuro/clair toggle
-- 🚀 Optimizar imágenes con compresión avanzada
-- 📱 Animaciones diferenciadas para mobile
-- 📝 Agregar blog o sección de artículos
-- ⚡ Agregar selección de idioma EN/ES
+## Contacto
 
-## 👨‍💻 Autor
+**Joshua Sanchez Mc Leish**, Backend Developer Junior | Java + Spring Boot
+Córdoba, Argentina · disponible para trabajo remoto
 
-Joshua SMC  
-Frontend Developer | React | JavaScript | UI/UX
-
-⭐ Si te gustó este proyecto, podés dejar una estrella en el repo :)
-
+- LinkedIn: https://linkedin.com/in/joshua-sanchez-mc-leish-746142399
+- GitHub: https://github.com/JoshuaSMC
+- Email: joshuasmcleish@gmail.com
